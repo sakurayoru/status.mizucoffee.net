@@ -1,0 +1,12 @@
+{
+  "name": "status.mizucoffee.net",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KawakawaRitsuki/status.mizucoffee.net.git",
+  "author": "Ritsuki Goto <develop@mizucoffee.net>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
