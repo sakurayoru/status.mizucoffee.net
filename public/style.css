@@ -1,0 +1,12 @@
+body {
+  margin: 16px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+div {
+  width: 600px;
+  margin: 0 auto;
+}

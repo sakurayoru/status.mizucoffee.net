@@ -1,12 +1,21 @@
 <html>
   <head>
     <title>status.mizucoffee.net</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
+    <h1>status.mizucoffee.net</h1>
+    <hr>
     <h2>neofetch</h2>
-    <%- neofetch %>
+    <div><%- neofetch %></div>
+    <hr>
     <h2>versions</h2>
-    Node.js: <%- versions.nodejs %><br>
-    Java: <%- versions.java %>
+    <div>
+      Node.js: <%- versions.nodejs %><br>
+      Java: <%- versions.java %>
+    </div>
   </body>
 </html>
