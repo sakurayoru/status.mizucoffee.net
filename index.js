@@ -34,15 +34,15 @@ app.get('/', (req, res) => {
   let ping = fs.readJsonSync('./ping.json')
   let neofetch = exec('neofetch', ['--stdout']).stdout.toString().replace(/\n/g,'<br>')
   let nodejs = exec('node', ['-v']).stdout.toString()
-  let java = exec('java', ['-version']).stderr.toString().split('\n')[0]
+  //  let java = exec('java', ['-version']).stderr.toString().split('\n')[0]
 
   res.render('index',
     {
       neofetch: neofetch,
       data: ping,
       versions: {
-        nodejs: nodejs,
-        java: java
+        nodejs: nodejs
+    //    java: java
       }
     });
 });
