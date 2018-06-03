@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 
-  let ping = fs.readJsonSync('./ping.json')
+  let ping = fs.readJsonSync('/data/status/ping.json')
   let neofetch = exec('neofetch', ['--stdout']).stdout.toString().replace(/\n/g,'<br>')
   let nodejs = exec('node', ['-v']).stdout.toString()
   //  let java = exec('java', ['-version']).stderr.toString().split('\n')[0]
