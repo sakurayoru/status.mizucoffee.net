@@ -14,10 +14,10 @@ const ping = new CronJob({
     let start_ms = new Date().getTime()
     request('GET', 'https://twiback.mizucoffee.net/');
     let elapsed_ms = new Date().getTime() - start_ms;
-    let ping = fs.readJsonSync('./ping.json')
+    let ping = fs.readJsonSync('/data/status/ping.json')
     ping.pop()
     ping.unshift(elapsed_ms)
-    fs.writeJsonSync('./ping.json', ping)
+    fs.writeJsonSync('/data/status/ping.json', ping)
   },
   start: false,
   timeZone: "Asia/Tokyo"
