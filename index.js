@@ -13,8 +13,9 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 
-  let neofetch = exec('neofetch', ['--stdout']).stdout.toString().replace(/\n/g,'<br>')
-  let nodejs = exec('node', ['-v']).stdout.toString()
+  let neofetch = exec('neofetch').stdout.toString().replace(/\n/g,'<br>')
+  let nodejs = exec('node', ['-v']).stdout.toString() .replace(/\n/g,'<br>')
+  let pm2 = exec('pm2', ['monit']).stdout.toString()
   //  let java = exec('java', ['-version']).stderr.toString().split('\n')[0]
 
   res.render('index',
@@ -24,9 +25,11 @@ app.get('/', (req, res) => {
         nodejs: nodejs
     //    java: java
       }
+      pm2 : pm2
     });
 });
 
 // nodeバージョン
 // neofetch
 // java
+// pm2 monit
